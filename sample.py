@@ -28,10 +28,10 @@ def main(params):
         for poem in poem_list:
             print poem+'\n'
     if params['output']>0:
-        filename=os.path.join('poems',params['output_filename']+'.txt')
+        filename=os.path.join('poems',params['output_filename']+'.csv')
         with open(filename,'wb') as my_file:
             for poem in poem_list:
-                my_file.write(poem+'\n')
+                my_file.write('"'+poem+chr(10)+'"'+chr(10))
     
     
     
